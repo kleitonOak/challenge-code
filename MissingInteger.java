@@ -17,11 +17,11 @@ import java.util.stream.Collectors;
 public class MissinInteger{
 
     public static void main(String[] args) {
-		System.out.println(solution(new Integer[]{-1,-3}));
+		System.out.println(solution(new int[]{-1,-3}));
 	}
 
-	private static int solution(Integer[] args) {
-		Map<Integer, Integer> treatedArray = Arrays.stream(args).filter(e->e > 0).distinct().collect(Collectors.toMap(Function.identity(), e -> e));
+	private static int solution(int[] args) {
+		Map<Integer, Integer> treatedArray = Arrays.stream(args).boxed().filter(e->e > 0).distinct().collect(Collectors.toMap(Function.identity(), e -> e));
 		int index = 1;
 		while (treatedArray.get(index) != null){
 			index++;
