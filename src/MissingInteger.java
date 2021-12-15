@@ -1,5 +1,4 @@
 import java.util.Arrays;
-import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -14,7 +13,7 @@ import java.util.stream.Collectors;
 * N is an integer within the range [1..100,000];
 * each element of array A is an integer within the range [−1,000,000..1,000,000].
 **/
-public class MissinInteger{
+public class MissingInteger{
 
     public static void main(String[] args) {
 		System.out.println(solution(new int[]{-1,-3}));
