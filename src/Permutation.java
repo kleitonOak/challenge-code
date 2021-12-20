@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Print all permutations of a string in Java
@@ -10,12 +11,26 @@ import java.util.List;
  */
 public class Permutation {
     public static void main(String[] args) {
+
         String permutatioString = "ABC";
-        List<String> permutations = new ArrayList<>();
-        getPermutation(permutatioString, 0, permutatioString.length(), permutations);
-        System.out.printf("Permutations: %s \n", Arrays.toString(permutations.toArray()));
+        String paramFindPermutation = "CAB";
+
+        System.out.printf("Is permutation of another? %s \n", getPermutation(permutatioString, paramFindPermutation));
     }
 
+    private static Boolean getPermutation(String permutatioString, String paramFindPermutation){
+        List<String> permutations = new ArrayList<>();
+        getPermutation(permutatioString, 0, permutatioString.length(), permutations);
+
+        System.out.printf("All Permutations: %s \n", Arrays.toString(permutations.toArray()));
+
+        if(permutations.stream().filter(e-> e.equalsIgnoreCase(paramFindPermutation)).findFirst().isPresent()){
+            return Boolean.TRUE;
+        }
+
+        return Boolean.FALSE;
+
+    }
     private static void getPermutation(String param, Integer start, Integer end, List<String> permutations){
         if(start == end-1) {
             permutations.add(param);
