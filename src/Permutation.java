@@ -11,14 +11,14 @@ import java.util.Objects;
  */
 public class Permutation {
     public static void main(String[] args) {
-
+        Permutation permutation = new Permutation();
         String permutatioString = "ABC";
         String paramFindPermutation = "CAB";
 
-        System.out.printf("Is permutation of another? %s \n", getPermutation(permutatioString, paramFindPermutation));
+        System.out.printf("Is permutation of another? %s \n", permutation.getPermutation(permutatioString, paramFindPermutation));
     }
 
-    private static Boolean getPermutation(String permutatioString, String paramFindPermutation){
+    private Boolean getPermutation(String permutatioString, String paramFindPermutation){
         List<String> permutations = new ArrayList<>();
         getPermutation(permutatioString, 0, permutatioString.length(), permutations);
 
@@ -31,7 +31,7 @@ public class Permutation {
         return Boolean.FALSE;
 
     }
-    private static void getPermutation(String param, Integer start, Integer end, List<String> permutations){
+    public void getPermutation(String param, Integer start, Integer end, List<String> permutations){
         if(start == end-1) {
             permutations.add(param);
         }else{
