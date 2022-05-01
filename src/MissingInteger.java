@@ -20,7 +20,7 @@ public class MissingInteger{
 	}
 
 	private static int solution(int[] args) {
-		Map<Integer, Integer> treatedArray = Arrays.stream(args).boxed().filter(e->e > 0).distinct().collect(Collectors.toMap(Function.identity(), e -> e));
+		Map<Integer, Integer> treatedArray = Arrays.stream(args).boxed().filter(e->e > 0).distinct().collect(Collectors.toMap(e->e, e -> e));
 		int index = 1;
 		while (treatedArray.get(index) != null){
 			index++;

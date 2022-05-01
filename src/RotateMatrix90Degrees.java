@@ -12,7 +12,15 @@ public class RotateMatrix90Degrees {
 
     private static Integer[][] rotateMatrix(Integer[][] matrix){
        //TODO :-(
+        for(int r=0; r<matrix.length; r++) {
+            for (int c = 0; c < matrix[r].length -1; c++) {
+                swapValue(matrix[r][c],matrix[c][(matrix[r].length-1-c)]);
+            }
+        }
         return matrix;
+    }
+
+    private static void swapValue(Integer matrix, Integer matrix1) {
     }
 
     private static void printMatrix(Integer[][] matrix){
