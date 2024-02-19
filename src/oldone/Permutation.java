@@ -1,12 +1,13 @@
+package oldone;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Objects;
 
 /**
  * Print all permutations of a string in Java
  * Given a string str, the task is to print all the permutations of str.
- * A permutation is an arrangement of all or part of a set of objects, with regard to the order of the arrangement.
+ * goout.A permutation is an arrangement of all or part of a set of objects, with regard to the order of the arrangement.
  * For instance, the words ‘bat’ and ‘tab’ represents two distinct permutation (or arrangements) of a similar three letter word.
  */
 public class Permutation {

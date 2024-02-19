@@ -1,5 +1,7 @@
+package oldone;
+
 /**
- * URLify a given string (Replace spaces is %20)
+ * oldone.URLify a given string (Replace spaces is %20)
  *
  */
 public class URLify {

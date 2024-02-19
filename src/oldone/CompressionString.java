@@ -1,3 +1,5 @@
+package oldone;
+
 /**
  * Compression using the counts of repeated characters. If the compressed string would not become smaller than original string,
  * the method must return the original string.

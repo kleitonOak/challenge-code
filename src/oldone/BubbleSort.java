@@ -1,3 +1,6 @@
+package oldone;
+
+import java.math.BigDecimal;
 import java.util.Arrays;
 
 public class BubbleSort {
@@ -8,6 +11,10 @@ public class BubbleSort {
         bubbleSort(vector, vector.length);
         System.out.format("Vector After Bubble Sort, %s", Arrays.toString(vector));
 
+        BigDecimal bigDecimal = new BigDecimal("2500.00");
+        BigDecimal bigDecimal2 = new BigDecimal("2500.00");
+        BigDecimal bigDecimal3 = bigDecimal.subtract(bigDecimal2);
+        System.out.println(bigDecimal3.doubleValue());
 
     }
 

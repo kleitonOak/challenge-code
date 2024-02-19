@@ -1,3 +1,5 @@
+package oldone;
+
 public class IsOrderingArrayStarEnd {
 
     boolean solution(int[] a) {
